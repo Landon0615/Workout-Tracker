@@ -4,7 +4,7 @@ const { Workout } = require("../models");
 router.get("/workouts", async (req, res) => {
   try {
     const workout = await Workout.aggregate([
-      { $addFields: { totalDuration: { $sum: "$exercise.duration" } } },
+      { $addFields: { totalDuration: { $sum: "$exercises.duration" } } },
     ]);
     res.json(workout);
   } catch (e) {
@@ -38,7 +38,7 @@ router.post("/workouts", async (req, res) => {
 router.get("/workouts/range", async (req, res) => {
   try {
     const workoutRange = await Workout.aggregate([
-      { $addFields: { totalDuration: { $sum: "$exercise.duration" } } },
+      { $addFields: { totalDuration: { $sum: "$exercises.duration" } } },
     ]);
     res.json(workoutRange);
   } catch (e) {
