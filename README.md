@@ -12,6 +12,8 @@ In order to install the necessary dependencies, open the console and run the fol
 ```npm i```
 ### Usage:
 In order to use this application you need to navigate to the link provided below.
+
+
 [workout-tracken](https://workout-tracken.herokuapp.com/?id=61357a31c62a1a00163b7ae6)
 <img width="1776" alt="Screen Shot 2021-09-05 at 8 13 18 PM" src="https://user-images.githubusercontent.com/80728975/132151210-fb917174-3155-4b3d-9ddb-e429fa7a30d0.png">
 
