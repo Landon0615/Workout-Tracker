@@ -4,7 +4,7 @@ const { Workout } = require("../models");
 router.get("/workouts", async (req, res) => {
   try {
     const workout = await Workout.aggregate([
-      { $addFields: { totalDuration: { $sum: "$workouts.duration" } } },
+      { $addFields: { totalDuration: { $sum: "$exercise.duration" } } },
     ]);
     res.json(workout);
   } catch (e) {
@@ -16,7 +16,7 @@ router.put("/workouts/:id", async ({ body, params }, res) => {
   try {
     const updateWorkout = await Workout.findByIdAndUpdate(
       params.id,
-      { $push: { workouts: body } },
+      { $push: { exercises: body } },
       { new: true, runValidators: true }
     );
 
@@ -38,7 +38,7 @@ router.post("/workouts", async (req, res) => {
 router.get("/workouts/range", async (req, res) => {
   try {
     const workoutRange = await Workout.aggregate([
-      { $addFields: { totalDuration: { $sum: "$workouts.duration" } } },
+      { $addFields: { totalDuration: { $sum: "$exercise.duration" } } },
     ]);
     res.json(workoutRange);
   } catch (e) {
