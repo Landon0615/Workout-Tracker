@@ -1,4 +1,4 @@
-# Tech-blog ![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)
+# Workout-Tracker![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)
 This is an application to keep track of your workouts either cardio or resistance. You are able to input your workout name, duration, weight, reps, sets, distance depending on what type of workout you are inputing. Once your workout has been input you can see the last workout you inputed and on the dashboard page you are able to see a graph displaying the duration, date and total weight you lifted or total time you worked out. 
 ## Table of Contents:
 * [Installation](#installation)
